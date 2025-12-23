@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --principal: #0015FF;
+    --secundaria: #000EA3;
+    --claro: #c9c9c9;
+    --claro-text: #ffffff;
+    --escuro: #000647;
+    --escuro-text: #00021A; 
+    --vidro: rgba(255, 255, 255, .3);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--claro-text);
+    background: url(./bg/gattttto.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 500px;
+    height: 97vh;
+    text-align: center;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid var(--vidro);
+    box-shadow: 0 0 4px var(--vidro);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+.container h1 {
+    background: linear-gradient(90deg, var(--principal), var(--claro));
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: gradienteMov 1s ease-in-out infinite alternate;
+}
+
+
+.paragrafo {
+    margin-top: 1rem;
+    border: 2px solid var(--vidro);
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.logo {
+    padding: 1rem 0.5rem;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+.logo img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--claro);
+    box-shadow: 0 0 6px white;
+    animation: crescer 2s ease-in-out infinite alternate;
+    cursor: grab;
+}
+
+.logo img:active {
+    cursor: grabbing;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}
+
+.discord {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #515e8c;
+    border: 2px solid var(--vidro);
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.discord:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2px var(--claro);
+}
+
+.discord:active {
+    transform: scale(1.0);
+}
+
+
+.github {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    border: 2px solid var(--vidro);
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+
+.github:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 2px var(--escuro);
+}
+
+.github:active {
+    transform: scale(1.0);
+}
+
+@keyframes crescer {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+
+}
+
+@keyframes gradienteMov {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
